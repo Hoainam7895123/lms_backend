@@ -1,0 +1,164 @@
+{
+    "_id" : ObjectId("680f945d4df30fe862ec83f4"),
+    "homework_id" : ObjectId("680f945c4df30fe862ec83f1"),
+    "student_id" : ObjectId("6804ab8d3d991958130ded87"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:44:45.026+0000"),
+    "updated_at" : ISODate("2025-04-28T14:56:19.097+0000"),
+    "__v" : NumberInt(0),
+    "file" : "https://docs.google.com/spreadsheets/d/1AvCEFuQi39xLvdm5UkoR-kkP1Zi_KKGa/edit?gid=1769546371#gid=1769546371"
+}
+{
+    "_id" : ObjectId("680f945d4df30fe862ec83f3"),
+    "homework_id" : ObjectId("680f945c4df30fe862ec83f1"),
+    "student_id" : ObjectId("6804ab833d991958130ded82"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:44:45.026+0000"),
+    "updated_at" : ISODate("2025-04-28T14:44:45.026+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("680f945d4df30fe862ec83f5"),
+    "homework_id" : ObjectId("680f945c4df30fe862ec83f1"),
+    "student_id" : ObjectId("6804ab903d991958130ded8c"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:44:45.026+0000"),
+    "updated_at" : ISODate("2025-04-28T14:44:45.026+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("680f945d4df30fe862ec83f6"),
+    "homework_id" : ObjectId("680f945c4df30fe862ec83f1"),
+    "student_id" : ObjectId("6804ab943d991958130ded91"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:44:45.026+0000"),
+    "updated_at" : ISODate("2025-04-28T14:44:45.026+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("680f947a4df30fe862ec8419"),
+    "homework_id" : ObjectId("680f947a4df30fe862ec8414"),
+    "student_id" : ObjectId("6804ab943d991958130ded91"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:45:14.183+0000"),
+    "updated_at" : ISODate("2025-04-28T14:45:14.183+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("680f947a4df30fe862ec8416"),
+    "homework_id" : ObjectId("680f947a4df30fe862ec8414"),
+    "student_id" : ObjectId("6804ab833d991958130ded82"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:45:14.183+0000"),
+    "updated_at" : ISODate("2025-04-28T14:45:14.183+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("680f947a4df30fe862ec8418"),
+    "homework_id" : ObjectId("680f947a4df30fe862ec8414"),
+    "student_id" : ObjectId("6804ab903d991958130ded8c"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:45:14.183+0000"),
+    "updated_at" : ISODate("2025-04-28T14:45:14.183+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("680f947a4df30fe862ec8417"),
+    "homework_id" : ObjectId("680f947a4df30fe862ec8414"),
+    "student_id" : ObjectId("6804ab8d3d991958130ded87"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:45:14.183+0000"),
+    "updated_at" : ISODate("2025-04-28T14:56:49.294+0000"),
+    "__v" : NumberInt(0),
+    "file" : "https://docs.google.com/spreadsheets/d/1AvCEFuQi39xLvdm5UkoR-kkP1Zi_KKGa/edit?gid=1769546371#gid=1769546371"
+}
+{
+    "_id" : ObjectId("680f94d54df30fe862ec843d"),
+    "homework_id" : ObjectId("680f94d54df30fe862ec8439"),
+    "student_id" : ObjectId("6804ab903d991958130ded8c"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:46:45.112+0000"),
+    "updated_at" : ISODate("2025-04-28T14:46:45.112+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("680f94d54df30fe862ec843c"),
+    "homework_id" : ObjectId("680f94d54df30fe862ec8439"),
+    "student_id" : ObjectId("6804ab8d3d991958130ded87"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:46:45.112+0000"),
+    "updated_at" : ISODate("2025-04-28T14:57:17.266+0000"),
+    "__v" : NumberInt(0),
+    "file" : "https://docs.google.com/spreadsheets/d/1AvCEFuQi39xLvdm5UkoR-kkP1Zi_KKGa/edit?gid=1769546371#gid=1769546371"
+}
+{
+    "_id" : ObjectId("680f94d54df30fe862ec843b"),
+    "homework_id" : ObjectId("680f94d54df30fe862ec8439"),
+    "student_id" : ObjectId("6804ab833d991958130ded82"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:46:45.112+0000"),
+    "updated_at" : ISODate("2025-04-28T14:46:45.112+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("680f94d54df30fe862ec843e"),
+    "homework_id" : ObjectId("680f94d54df30fe862ec8439"),
+    "student_id" : ObjectId("6804ab943d991958130ded91"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:46:45.112+0000"),
+    "updated_at" : ISODate("2025-04-28T14:46:45.112+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("680f95604df30fe862ec8469"),
+    "homework_id" : ObjectId("680f95604df30fe862ec8465"),
+    "student_id" : ObjectId("6804ab903d991958130ded8c"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:49:04.494+0000"),
+    "updated_at" : ISODate("2025-04-28T14:49:04.494+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("680f95604df30fe862ec8467"),
+    "homework_id" : ObjectId("680f95604df30fe862ec8465"),
+    "student_id" : ObjectId("6804ab833d991958130ded82"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:49:04.494+0000"),
+    "updated_at" : ISODate("2025-04-28T14:49:04.494+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("680f95604df30fe862ec8468"),
+    "homework_id" : ObjectId("680f95604df30fe862ec8465"),
+    "student_id" : ObjectId("6804ab8d3d991958130ded87"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:49:04.494+0000"),
+    "updated_at" : ISODate("2025-04-28T14:58:00.964+0000"),
+    "__v" : NumberInt(0),
+    "file" : "https://docs.google.com/spreadsheets/d/1AvCEFuQi39xLvdm5UkoR-kkP1Zi_KKGa/edit?gid=1769546371#gid=1769546371"
+}
+{
+    "_id" : ObjectId("680f95604df30fe862ec846a"),
+    "homework_id" : ObjectId("680f95604df30fe862ec8465"),
+    "student_id" : ObjectId("6804ab943d991958130ded91"),
+    "score" : "0",
+    "status" : false,
+    "created_at" : ISODate("2025-04-28T14:49:04.494+0000"),
+    "updated_at" : ISODate("2025-04-28T14:49:04.494+0000"),
+    "__v" : NumberInt(0)
+}

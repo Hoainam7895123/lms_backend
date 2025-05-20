@@ -1,0 +1,265 @@
+{
+    "_id" : ObjectId("680463532b761661ff37061b"),
+    "name" : "System Admin",
+    "auth_type" : "local",
+    "username" : "admin@lms.com",
+    "password" : "$2b$10$c64pVO2wtuvvw45PyCmhhujn9dv.GvDvw0mP2qgH7rw5PBe8w97Gq",
+    "role" : "ROLE_SYSTEM_ADMIN",
+    "login_count" : NumberInt(1),
+    "created_at" : ISODate("2025-04-20T03:00:35.554+0000"),
+    "updated_at" : ISODate("2025-04-20T03:00:35.554+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("680463752b761661ff370628"),
+    "name" : "Trung tâm Code",
+    "auth_type" : "local",
+    "auth_id" : "center_admin_1",
+    "username" : "center_admin_1",
+    "password" : "$2b$10$mqXtkbT/3zwh7N770eMT9uPRm8RTPP4LrnBTVv3c5sTvrMKz8SmJq",
+    "role" : "ROLE_CENTER_ADMIN",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(0),
+    "created_at" : ISODate("2025-04-20T03:01:09.444+0000"),
+    "updated_at" : ISODate("2025-04-20T03:01:09.444+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("6804638c2b761661ff370632"),
+    "name" : "Trung tâm Ngoại ngữ English",
+    "auth_type" : "local",
+    "auth_id" : "center_admin_2",
+    "username" : "center_admin_2",
+    "password" : "$2b$10$.HUgAPZn1B.UfmZT1f5t8OD8nSwWzIsyBSAk8CjORS4492gHoHhga",
+    "role" : "ROLE_CENTER_ADMIN",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(1),
+    "created_at" : ISODate("2025-04-20T03:01:32.543+0000"),
+    "updated_at" : ISODate("2025-04-20T03:01:51.411+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("68046b01f56adce2bd784ea6"),
+    "name" : "Giáo viên 1",
+    "auth_type" : "local",
+    "auth_id" : "teacher_1",
+    "username" : "teacher_1",
+    "password" : "$2b$10$QUToIg5BZGpYXBl3bX7VdemWP9OiGB4PyLJXlMv/c/8fRPVSHbAXC",
+    "role" : "ROLE_TEACHER",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(1),
+    "created_by" : ObjectId("6804638c2b761661ff370632"),
+    "created_at" : ISODate("2025-04-20T03:33:21.542+0000"),
+    "updated_at" : ISODate("2025-05-01T23:51:42.831+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("68049c9c5afa655ab1a69dae"),
+    "name" : "Giáo viên 2",
+    "auth_type" : "local",
+    "auth_id" : "teacher_2",
+    "username" : "teacher_2",
+    "password" : "$2b$10$qOH065X11dYAW5mICYsGCOED7bYeg.yR6yrihWtwedka0hM0PoAUe",
+    "role" : "ROLE_TEACHER",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(0),
+    "created_by" : ObjectId("6804638c2b761661ff370632"),
+    "created_at" : ISODate("2025-04-20T07:05:00.065+0000"),
+    "updated_at" : ISODate("2025-04-20T07:05:00.065+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("68049ca35afa655ab1a69db6"),
+    "name" : "Giáo viên 3",
+    "auth_type" : "local",
+    "auth_id" : "teacher_3",
+    "username" : "teacher_3",
+    "password" : "$2b$10$JscSGCm2jKaMHjXjvPwxd.4fha0vw4ZDMRTvOVXmaTkAO7O2LszHm",
+    "role" : "ROLE_TEACHER",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(0),
+    "created_by" : ObjectId("6804638c2b761661ff370632"),
+    "created_at" : ISODate("2025-04-20T07:05:07.355+0000"),
+    "updated_at" : ISODate("2025-04-20T07:05:07.355+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("6804ab833d991958130ded82"),
+    "name" : "Trương Đình Hoài Nam",
+    "auth_type" : "local",
+    "auth_id" : "student1",
+    "username" : "student1",
+    "password" : "$2b$10$SLnJXgZumxxpZiyJPl9JyuqGKEveFL11ciy3FscfNj.dcDij/0ss.",
+    "role" : "ROLE_STUDENT",
+    "email" : "nam@example.com",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(0),
+    "created_at" : ISODate("2025-04-20T08:08:35.682+0000"),
+    "updated_at" : ISODate("2025-04-20T08:08:35.682+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("6804ab8d3d991958130ded87"),
+    "name" : "Trương Đình Hoài Nam",
+    "auth_type" : "local",
+    "auth_id" : "student2",
+    "username" : "student2",
+    "password" : "$2b$10$lWU1dpeXSoNStqnNciu6neBdIRNDz.AHB47fDTFLLjVNl2O6X7LOq",
+    "role" : "ROLE_STUDENT",
+    "email" : "nam@example.com",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(1),
+    "created_at" : ISODate("2025-04-20T08:08:45.124+0000"),
+    "updated_at" : ISODate("2025-05-01T23:50:12.963+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("6804ab903d991958130ded8c"),
+    "name" : "Trương Đình Hoài Nam",
+    "auth_type" : "local",
+    "auth_id" : "student3",
+    "username" : "student3",
+    "password" : "$2b$10$ien0T9KEYj6ZtafjkrpRZuOHjpPxu/MPVej9Pyxk8hxuLW3QwGfd6",
+    "role" : "ROLE_STUDENT",
+    "email" : "nam@example.com",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(0),
+    "created_at" : ISODate("2025-04-20T08:08:48.728+0000"),
+    "updated_at" : ISODate("2025-04-20T08:08:48.728+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("6804ab943d991958130ded91"),
+    "name" : "Trương Đình Hoài Nam",
+    "auth_type" : "local",
+    "auth_id" : "student4",
+    "username" : "student4",
+    "password" : "$2b$10$Vf3yfyIAUCPDZaOo8VVy/u3M/2gdtiVihPkyO.TB2WwFu/BPRQLuu",
+    "role" : "ROLE_STUDENT",
+    "email" : "nam@example.com",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(0),
+    "created_at" : ISODate("2025-04-20T08:08:52.815+0000"),
+    "updated_at" : ISODate("2025-04-20T08:08:52.815+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("6804ab973d991958130ded96"),
+    "name" : "Trương Đình Hoài Nam",
+    "auth_type" : "local",
+    "auth_id" : "student5",
+    "username" : "student5",
+    "password" : "$2b$10$JWjLJf3BFlvwZ9t3c129ZOjUhS0gZg1GzTfW0VYHnVMGXq8IN13H.",
+    "role" : "ROLE_STUDENT",
+    "email" : "nam@example.com",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(0),
+    "created_at" : ISODate("2025-04-20T08:08:55.732+0000"),
+    "updated_at" : ISODate("2025-04-20T08:08:55.732+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("6804ab9a3d991958130ded9b"),
+    "name" : "Trương Đình Hoài Nam",
+    "auth_type" : "local",
+    "auth_id" : "student6",
+    "username" : "student6",
+    "password" : "$2b$10$/4JSQYdFbsln4LJOZK3voOL.mwAvRzcY7wn2nFWenaS3OPUqlIMeG",
+    "role" : "ROLE_STUDENT",
+    "email" : "nam@example.com",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(0),
+    "created_at" : ISODate("2025-04-20T08:08:58.734+0000"),
+    "updated_at" : ISODate("2025-04-20T08:08:58.734+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("6804ab9e3d991958130deda0"),
+    "name" : "Trương Đình Hoài Nam",
+    "auth_type" : "local",
+    "auth_id" : "student7",
+    "username" : "student7",
+    "password" : "$2b$10$ZqNl/vBadcGzUbfjND/c9u4Cbam.2wAqRGb9PZGVEhd7rKMagLzte",
+    "role" : "ROLE_STUDENT",
+    "email" : "nam@example.com",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(0),
+    "created_at" : ISODate("2025-04-20T08:09:02.044+0000"),
+    "updated_at" : ISODate("2025-04-20T08:09:02.044+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("6813406a54aae673727d912d"),
+    "name" : "Truong Dinh Hoai Nam",
+    "auth_type" : "local",
+    "auth_id" : "hoainam99",
+    "username" : "hoainam99",
+    "password" : "$2b$10$aUp59AI5uj08R4dOVn2AD.azwHP3o9LjMqwu6Fsu/wYFZ3/vnbZJG",
+    "role" : "ROLE_STUDENT",
+    "email" : "hoainam123@gmail.com",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(0),
+    "created_at" : ISODate("2025-05-01T09:35:38.641+0000"),
+    "updated_at" : ISODate("2025-05-01T09:35:38.641+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("681341a41fc9260dac2182bb"),
+    "name" : "Trương Đình Hoài Nam",
+    "auth_type" : "local",
+    "auth_id" : "student78",
+    "username" : "student78",
+    "password" : "$2b$10$R1eJwNhv1bCZguwTqyEhG.ALuAgEY/cn2Td.K9u9Yoh/XSaSmMn7y",
+    "role" : "ROLE_STUDENT",
+    "email" : "nam@example.com",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(0),
+    "created_at" : ISODate("2025-05-01T09:40:52.577+0000"),
+    "updated_at" : ISODate("2025-05-01T09:40:52.577+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("681341e81fc9260dac2182c6"),
+    "name" : "Truong Dinh Hoai Nam",
+    "auth_type" : "local",
+    "auth_id" : "hoainam111",
+    "username" : "hoainam111",
+    "password" : "$2b$10$5P0B7tdnZW1OvGPfr0kWreG54buRp6QMBKTQwQYEbPBCfBpUNLDHS",
+    "role" : "ROLE_STUDENT",
+    "email" : "hoainam123@gmail.com",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(0),
+    "created_at" : ISODate("2025-05-01T09:42:00.239+0000"),
+    "updated_at" : ISODate("2025-05-01T09:42:00.239+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("68180aa7ee2de506d58b4a14"),
+    "name" : "Trương Đình Hoài Nam",
+    "auth_type" : "local",
+    "auth_id" : "student79",
+    "username" : "student79",
+    "password" : "$2b$10$66LIFfDb15/10TPS1z0vKuFwDk/zAk7j2AlBRKV8nsBHfu/B3/GBW",
+    "role" : "ROLE_STUDENT",
+    "email" : "hoainam7895123@gmail.com",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(0),
+    "created_at" : ISODate("2025-05-05T00:47:35.027+0000"),
+    "updated_at" : ISODate("2025-05-05T00:47:35.027+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("68180ce706087f6f7e093e1c"),
+    "name" : "Trương Đình Hoài Nam",
+    "auth_type" : "local",
+    "auth_id" : "student799",
+    "username" : "student799",
+    "password" : "$2b$10$wPjYLkFTBI.Gzk4yhVyT1uaJ5kVkg5ZVN.Jsd.fqfsZHBY0TG7CV6",
+    "role" : "ROLE_STUDENT",
+    "email" : "truongdinhhoainam1703@gmail.com",
+    "active" : NumberInt(1),
+    "login_count" : NumberInt(0),
+    "created_at" : ISODate("2025-05-05T00:57:11.072+0000"),
+    "updated_at" : ISODate("2025-05-05T00:57:11.072+0000"),
+    "__v" : NumberInt(0)
+}
