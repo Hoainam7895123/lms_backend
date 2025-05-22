@@ -17,7 +17,7 @@ COPY . .
 ENV HOST 0.0.0.0
 
 # Mở port
-EXPOSE 3001
+EXPOSE 8000
 
 # Chạy app
 CMD ["node", "index.js"]

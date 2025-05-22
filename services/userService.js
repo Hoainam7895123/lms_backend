@@ -94,9 +94,43 @@ async function getAllTeachersNotInCourse(courseID, options = {}) {
     };
 }
 
+async function getCoursesAndStudentsForUser(userId) {
+    const user = await UserModel.findById(userId);
+
+    if (!user) {
+        throw new Error('User not found');
+    }
+
+    if (user.role !== 'ROLE_CENTER_ADMIN' && user.role !== 'ROLE_TEACHER') {
+        throw new Error('User is not allowed to access courses');
+    }
+
+    // Tìm tất cả các khóa học mà user là center_admin hoặc là teacher
+    const courses = await CourseModel.find({
+        $or: [{ center_admin: user._id }, { teachers: user._id }],
+    }).populate('students'); // populate để lấy thông tin sinh viên luôn
+
+    // Duyệt qua từng khóa học và thu thập học sinh không trùng
+    const studentMap = new Map();
+    courses.forEach(course => {
+        course.students.forEach(student => {
+            studentMap.set(student._id.toString(), student);
+        });
+    });
+
+    // Chuyển map về mảng học sinh không trùng
+    const uniqueStudents = Array.from(studentMap.values());
+
+    return {
+        courses,
+        students: uniqueStudents,
+    };
+}
+
 module.exports = {
     getUserByID,
     getAllStudentsOfCourse,
     getAllTeacherOfCourse,
     getAllTeachersNotInCourse,
+    getCoursesAndStudentsForUser,
 };

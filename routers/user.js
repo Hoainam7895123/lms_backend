@@ -7,6 +7,7 @@ const {
     getUserByID,
     getAllTeachersNotInCourse,
     joinRequestToCourse,
+    getCoursesAndStudentsForUser,
 } = require('../services/userService');
 const { authenticateToken } = require('../helpers/auth');
 
@@ -89,6 +90,16 @@ router.get('/api/users/info/me', authenticateToken, async (req, res) => {
         console.log('UserId: ', userId);
         const user = await getUserByID(userId);
         return res.status(200).json({ error: false, data: user });
+    } catch (error) {
+        return res.status(500).json({ error: true, message: error.message });
+    }
+});
+
+router.get('/api/dashboard', authenticateToken, async (req, res) => {
+    try {
+        const userId = req.user.id;
+        const response = await getCoursesAndStudentsForUser(userId);
+        return res.status(200).json({ error: false, data: response });
     } catch (error) {
         return res.status(500).json({ error: true, message: error.message });
     }

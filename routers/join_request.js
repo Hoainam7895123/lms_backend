@@ -70,6 +70,11 @@ router.post('/api/courses/:courseId/join-request', authenticateToken, async (req
         const userId = req.user.id;
         const courseId = req.params.courseId;
 
+        const course = await CourseModel.findById(courseId);
+        if (!course) {
+            res.status(400).json({ error: true, message: 'Course không tồn tại' });
+        }
+
         const response = await joinRequestToCourse(userId, courseId);
 
         return res.status(200).json({ error: false, data: response });
