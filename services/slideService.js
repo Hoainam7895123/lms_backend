@@ -10,7 +10,7 @@ async function getSlidesOfBlock(blockID) {
     return slides;
 }
 
-async function addSlide(title, description, file, blockID) {
+async function addSlide(title, description, blockID) {
     const block = await BlockModel.findById(blockID);
     if (!block) {
         throw new Error('Topic created failed');
@@ -18,7 +18,6 @@ async function addSlide(title, description, file, blockID) {
     const slide = new SlideModel({
         title,
         description,
-        file,
         block_id: blockID,
     });
     await slide.save();

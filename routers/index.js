@@ -16,6 +16,7 @@ router.use(require('./export-report'));
 router.use(require('./mobile/mobile'));
 router.use(require('./upload'));
 router.use(require('./googleAuth'));
+router.use(require('./chatbot'));
 
 router.use(require('./notification'));
 

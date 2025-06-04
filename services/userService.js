@@ -110,6 +110,7 @@ async function getCoursesAndStudentsForUser(userId) {
         $or: [{ center_admin: user._id }, { teachers: user._id }],
     }).populate('students'); // populate để lấy thông tin sinh viên luôn
 
+    const teacherCoures = await CourseModel.find({ center_admin: user._id }).populate('teachers'); // populate để lấy thông tin sinh viên luôn
     // Duyệt qua từng khóa học và thu thập học sinh không trùng
     const studentMap = new Map();
     courses.forEach(course => {
@@ -124,6 +125,7 @@ async function getCoursesAndStudentsForUser(userId) {
     return {
         courses,
         students: uniqueStudents,
+        teachers: teacherCoures.length,
     };
 }
 

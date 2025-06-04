@@ -7,6 +7,7 @@ const routes = require('./routers/index');
 
 const session = require('express-session');
 const configurePassport = require('./passport');
+const { createIndex, checkIndexExists } = require('./helpers/vector-db');
 
 const PORT = process.env.PORT || 3001;
 
@@ -31,6 +32,21 @@ app.use(
     })
 );
 
+const init = async () => {
+    // const indexExists = await checkIndexExists();
+    // if (!indexExists) {
+    await createIndex();
+    // } else {
+    //     const stats = await checkIndexExists();
+    //     if (stats) {
+    //         console.log('Index exists. Stats:', stats);
+    //     } else {
+    //         console.log('Index does not exist.');
+    //     }
+    //     const response = await describeIndexStats();
+    // }
+};
+
 configurePassport(app, PORT);
 
 app.use(express.json());
@@ -39,7 +55,8 @@ app.use('/', express.static('../public'));
 
 app.use(routes);
 
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, '0.0.0.0', async () => {
+    // await init();
     console.log(`Server đang chạy tại http://localhost:${PORT || 3000}`);
 });
 

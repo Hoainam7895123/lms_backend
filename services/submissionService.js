@@ -8,9 +8,13 @@ const CourseModel = require('../models/lms_course');
 const UserModel = require('../models/users');
 
 async function submitHomework(homeworkId, studentId, file) {
+    const date = new Date();
     const submitHomework = await SubmissionModel.findOneAndUpdate(
         { homework_id: homeworkId, student_id: studentId },
-        { file: file },
+        {
+            file: file,
+            date_of_submission: date,
+        },
         { new: true }
     );
 

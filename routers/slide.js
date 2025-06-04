@@ -34,8 +34,8 @@ router.post('/api/blocks/:blockID/slides', async (req, res) => {
         //     });
         // }
 
-        const { title, description, file } = req.body;
-        const slide = await addSlide(title, description, file, req.params.blockID);
+        const { title, description } = req.body;
+        const slide = await addSlide(title, description, req.params.blockID);
         res.status(201).json({ error: false, data: slide });
     } catch (error) {
         res.status(400).json({ error: true, message: error.message });

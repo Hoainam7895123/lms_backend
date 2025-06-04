@@ -40,7 +40,7 @@ router.get('/api/submission/homeworks/:homeworkId', authenticateToken, async (re
         const submission = await SubmissionModel.findOne({
             student_id: userId,
             homework_id: homeworkId,
-        });
+        }).populate('rated_by', 'name');
 
         res.status(200).json({ error: false, data: submission });
     } catch (error) {
