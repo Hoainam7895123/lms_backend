@@ -13,14 +13,20 @@ async function generateAnswer(query, retrievedChunks) {
 
     console.log(context);
 
+    // const systemMessage = `
+    //     Bạn là LMSBot, trợ lý điện tử của hệ thống quản lý học tập LMS.
+    //     Nhiệm vụ của bạn là hỗ trợ giảng viên và học sinh trong việc giải thích nội dung tài liệu,
+    //     trả lời mọi câu hỏi bằng tiếng Việt, sử dụng ngôn ngữ ngắn gọn, chính xác và dễ hiểu.
+    //     Trả lời dựa trên thông tin có trong nội dung được cung cấp, nếu không tìm thấy trong nội dung được cung cấp bạn có thể tự tìm hiểu và trả lời.
+    //     Nếu không có thông tin phù hợp, hãy trả lời:
+    //     "Không tìm thấy thông tin phù hợp trong tài liệu được cung cấp."`;
     const systemMessage = `
-        Bạn là LMSBot, trợ lý điện tử của hệ thống quản lý học tập LMS. 
-        Nhiệm vụ của bạn là hỗ trợ giảng viên và học sinh trong việc giải thích nội dung tài liệu, 
-        trả lời mọi câu hỏi bằng tiếng Việt, sử dụng ngôn ngữ ngắn gọn, chính xác và dễ hiểu. 
-        Chỉ trả lời dựa trên thông tin có trong nội dung được cung cấp, không tự suy diễn hoặc thêm thông tin không có trong tài liệu. 
-        Khi sử dụng thông tin từ đoạn cụ thể, hãy gắn thẻ tham chiếu ngay sau câu trả lời theo định dạng **[ref]ID[/ref]**, 
-        sử dụng chính xác ID của đoạn (ví dụ: [ref]doc1-chunk-0[/ref]). Nếu không có thông tin phù hợp, hãy trả lời:
-        "Không tìm thấy thông tin phù hợp trong tài liệu được cung cấp."`;
+        Bạn là Learn Smart, trợ lý điện tử của hệ thống quản lý học tập LMS.  
+        Nhiệm vụ của bạn là hỗ trợ giảng viên và học sinh trong việc giải thích nội dung tài liệu,  
+        trả lời mọi câu hỏi bằng tiếng Việt, sử dụng ngôn ngữ ngắn gọn, chính xác và dễ hiểu.  
+        Khi có nội dung được cung cấp, hãy ưu tiên sử dụng thông tin trong nội dung đó để trả lời.  
+        Nếu thông tin không có trong nội dung được cung cấp, bạn có thể sử dụng hiểu biết của mình để đưa ra câu trả lời phù hợp.
+        `;
 
     const humanMessage = `
         Dưới đây là phần trích dẫn tài liệu học tập hoặc hướng dẫn:
@@ -28,7 +34,7 @@ async function generateAnswer(query, retrievedChunks) {
 
         Câu hỏi của người dùng: "${query}"
 
-        Dựa trên nội dung trên, hãy đưa ra câu trả lời chính xác, ngắn gọn và dễ hiểu, phù hợp với đối tượng là giảng viên hoặc học sinh. Nếu không đủ thông tin để trả lời, hãy nói rõ là chưa đủ thông tin.`;
+        Dựa trên nội dung trên, hãy đưa ra câu trả lời chính xác, ngắn gọn và dễ hiểu, phù hợp với đối tượng là giảng viên hoặc học sinh.`;
 
     // Invoke the LLM with the system and human messages
     const aiMsg = await llm.invoke([

@@ -66,6 +66,10 @@ const SchemaObject = new Schema(
             type: Date,
             required: false,
         },
+        resetToken: {
+            type: String,
+            required: false,
+        },
     },
     {
         timestamps: {

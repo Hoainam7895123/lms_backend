@@ -13,9 +13,15 @@ async function sendResetEmail(toEmail, token) {
     const mailOptions = {
         from: '"Your App" <your-email@gmail.com>',
         to: toEmail,
-        subject: 'Đặt lại mật khẩu',
-        html: `<p>Click vào link bên dưới để đặt lại mật khẩu:</p>
-           <a href="https://yourdomain.com/reset-password?token=${token}">Reset mật khẩu</a>`,
+        subject: 'Mã xác thực đặt lại mật khẩu',
+        html: `
+            <p>Xin chào,</p>
+            <p>Chúng tôi nhận được yêu cầu đặt lại mật khẩu cho tài khoản của bạn.</p>
+            <p>Vui lòng nhập mã xác thực bên dưới để tiếp tục:</p>
+            <h2 style="letter-spacing: 2px;">${token}</h2>
+            <p>Nếu bạn không yêu cầu, hãy bỏ qua email này.</p>
+            <p>Trân trọng,<br>Your App Team</p>
+        `,
     };
 
     await transporter.sendMail(mailOptions);

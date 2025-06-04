@@ -186,7 +186,7 @@ router.post('/api/forgot-password', async (req, res) => {
         if (!user) return res.status(404).json({ message: 'Email không tồn tại trong hệ thống' });
 
         // Tạo token
-        const token = crypto.randomBytes(32).toString('hex');
+        const token = generateRandomString();
 
         user.resetToken = token;
         await user.save();
@@ -199,25 +199,55 @@ router.post('/api/forgot-password', async (req, res) => {
     }
 });
 
+function generateRandomString(length = 8) {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    const bytes = crypto.randomBytes(length);
+    for (let i = 0; i < length; i++) {
+        result += chars[bytes[i] % chars.length];
+    }
+    return result;
+}
+
+router.post('/api/verify-reset-token', async (req, res) => {
+    try {
+        const { token } = req.body;
+        console.log('Token: ', token);
+        const user = await UserModel.findOne({
+            resetToken: token,
+        });
+
+        if (!user)
+            return res.status(400).json({ error: true, msg: 'Token không hợp lệ hoặc đã hết hạn' });
+
+        return res.status(200).json({ error: false, msg: 'Success' });
+    } catch (error) {
+        res.status(500).json({ error: true, msg: 'Lỗi server' });
+    }
+});
+
 router.post('/api/reset-password', async (req, res) => {
     const { token, newPassword } = req.body;
+    console.log(token, newPassword);
 
     try {
         const user = await UserModel.findOne({
             resetToken: token,
         });
 
-        if (!user) return res.status(400).json({ message: 'Token không hợp lệ hoặc đã hết hạn' });
+        if (!user)
+            return res.status(200).json({ error: true, msg: 'Token không hợp lệ hoặc đã hết hạn' });
 
         const hashedPassword = await bcrypt.hash(newPassword, 10);
 
         user.password = hashedPassword;
         user.resetToken = undefined;
         await user.save();
+        console.log('User: ', user);
 
-        res.json({ message: 'Đặt lại mật khẩu thành công' });
+        return res.status(200).json({ error: false, msg: 'Đặt lại mật khẩu thành công' });
     } catch (err) {
-        res.status(500).json({ message: 'Lỗi server', error: err.message });
+        res.status(500).json({ error: true, msg: 'Lỗi server' });
     }
 });
 
